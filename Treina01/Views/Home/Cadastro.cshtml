@@ -1,0 +1,54 @@
+﻿@model Treina01.Models.CadastroModel
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<h2>Cadastro</h2>
+@using(Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Nome)
+        </div>
+        <div class="editor-form">
+            @Html.EditorFor(m => m.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cidade)
+        </div>
+        <div class="editor-form">
+            @Html.EditorFor(m => m.Cidade)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Estado)
+        </div>
+        <div class="editor-form">
+            @Html.EditorFor(m => m.Estado)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Email)
+        </div>
+        <div class="editor-form">
+            @Html.EditorFor(m => m.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Fone)
+        </div>
+        <div class="editor-form">
+            @Html.EditorFor(m => m.Fone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Celular)
+        </div>
+        <div class="editor-form">
+            @Html.EditorFor(m => m.Celular)
+        </div>
+    </fieldset>
+
+}

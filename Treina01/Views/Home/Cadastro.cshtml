@@ -1,6 +1,12 @@
 ﻿@model Treina01.Models.CadastroModel
 @{
     ViewBag.Title = "Cadastro";
+
+    List<string> estado = new List<string>();
+    estado.Add("SP");
+    estado.Add("RJ");
+    estado.Add("MG");
+    estado.Add("GO");
 }
 
 <h2>Cadastro</h2>
@@ -11,44 +17,54 @@
         <div class="editor-label">
             @Html.LabelFor(m => m.Nome)
         </div>
-        <div class="editor-form">
+        <div class="editor-field">
             @Html.EditorFor(m => m.Nome)
+            @Html.ValidationMessageFor(m => m.Nome)
         </div>
 
         <div class="editor-label">
             @Html.LabelFor(m => m.Cidade)
         </div>
-        <div class="editor-form">
+        <div class="editor-field">
             @Html.EditorFor(m => m.Cidade)
+            @Html.ValidationMessageFor(m => m.Cidade)
         </div>
 
         <div class="editor-label">
             @Html.LabelFor(m => m.Estado)
         </div>
-        <div class="editor-form">
+        <div class="editor-field">
             @Html.EditorFor(m => m.Estado)
+            @Html.ValidationMessageFor(m => m.Estado)
         </div>
 
         <div class="editor-label">
             @Html.LabelFor(m => m.Email)
         </div>
-        <div class="editor-form">
+        <div class="editor-field">
             @Html.EditorFor(m => m.Email)
+            @Html.ValidationMessageFor(m => m.Email)
         </div>
 
         <div class="editor-label">
             @Html.LabelFor(m => m.Fone)
         </div>
-        <div class="editor-form">
+        <div class="editor-field">
             @Html.EditorFor(m => m.Fone)
+            @Html.ValidationMessageFor(m => m.Fone)
         </div>
 
         <div class="editor-label">
             @Html.LabelFor(m => m.Celular)
         </div>
-        <div class="editor-form">
+        <div class="editor-field">
             @Html.EditorFor(m => m.Celular)
+            @Html.ValidationMessageFor(m => m.Celular)
         </div>
+        <br/>
+        <p>
+            <input type="submit" value="Enviar" />
+        </p>
+        
     </fieldset>
-
 }
